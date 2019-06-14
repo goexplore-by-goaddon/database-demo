@@ -5,6 +5,6 @@
 	{% if tasks_insertion._id == nil %}
 		{"status": "422"}
 	{% else %}
-		{"status": "200", "_id": tasks_insertion._id}
+		{"status": "200", "_id": "{{ tasks_insertion._id }}"}
 	{% endif %}
 {% endif %}
