@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row mb-4">
 	<div class="col-md-12">
 		<form action="/{{ params.locale }}/tasks.js" method="post" data-remote="true">
 			<div class="input-group">
@@ -9,12 +9,10 @@
 	</div>
 </div>
 
-<table class="table table-borderless">
-	<tbody>
-		{% for task in tasks %}
-			{% assign task_id 	= task._id %}
-			{% assign task_name = task.name %}
-			{% include "tasks/task" %}
-		{% endfor %}
-	</tbody>
-</table>
+<div class="tasks">
+	{% for task in tasks %}
+		{% assign task_id 	= task._id %}
+		{% assign task_name = task.name %}
+		{% include "tasks/task" %}
+	{% endfor %}
+</div>
