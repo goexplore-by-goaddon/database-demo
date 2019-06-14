@@ -2,5 +2,5 @@
 
 	{% assign tasks_insertion = "create_task" | db_insert_one: company_id: account._id, name: params.name %}
 
-
+	{"status": "204"}
 {% endif %}
