@@ -1,0 +1,24 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th width="1"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<form action="/{{ params.locale }}/tasks" method="post">
+					<input type="text" name="name" placeholder="{{ l.placeholders.name }}">
+					<input type="submit" class="btn btn-outline-primary" value="{{ l.buttons.create }}">
+				</form>
+			</td>
+		</tr>
+		{% for task in tasks %}
+			<tr>
+				<td>
+					<a href="/{{ params.locale }}/tasks/{{ task._id }}"> {{ task.name | strip_html }} </a>
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
