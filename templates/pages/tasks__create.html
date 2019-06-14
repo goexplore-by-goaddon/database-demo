@@ -4,6 +4,6 @@
 
 	{% if tasks_insertion._id == nil %}
 	{% else %}
-		(".table > tbody:first-child").before("<tr><td>{{ tasks_insertion._id }}</td><td></td></tr>")
+		$(".table > tbody:first-child").before('{% include "tasks/task" %}');
 	{% endif %}
 {% endif %}

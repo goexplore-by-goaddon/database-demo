@@ -1,8 +1,12 @@
-<div class="d-flex">
-	<form action="/{{ params.locale }}/tasks.js" method="post" data-remote="true">
-		<input class="form-control mr-1" type="text" name="name" placeholder="{{ l.placeholders.name }}">
-		<input class="btn btn-outline-primary" type="submit" value="{{ l.buttons.create }}">
-	</form>
+<div class="row">
+	<div class="col-md-12">
+		<form action="/{{ params.locale }}/tasks.js" method="post" data-remote="true">
+			<div class="input-group">
+				<input class="form-control mr-1" type="text" name="name" placeholder="{{ l.placeholders.name }}">
+				<input class="btn btn-outline-primary" type="submit" value="{{ l.buttons.create }}">
+			</div>
+		</form>
+	</div>
 </div>
 
 <table class="table table-borderless">
