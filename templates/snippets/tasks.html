@@ -1,24 +1,12 @@
-<script>
-	$(document).on("turbolinks:load", function() {
-		$(".create-task").on("ajax:success", function(event, data, status, xhr) {
-			return $(this).closest("tr").after("<tr id='" + data._id + "'><td>" + data._id + "</td></tr>");
-		}).on("ajax:error", function(event, xhr, status, error) {
-			return console.log(error);
-		});
-	});
-</script>
+<div class="d-flex">
+	<form action="/{{ params.locale }}/tasks.js" method="post" data-remote="true">
+		<input class="form-control mr-1" type="text" name="name" placeholder="{{ l.placeholders.name }}">
+		<input class="btn btn-outline-primary" type="submit" value="{{ l.buttons.create }}">
+	</form>
+</div>
+
 <table class="table table-borderless">
 	<tbody>
-		<tr>
-			<td>
-				<form class="create-task" action="/{{ params.locale }}/tasks.json" method="post" data-remote="true">
-					<input class="form-control" type="text" name="name" placeholder="{{ l.placeholders.name }}">
-				</td>
-				<td width="1">
-					<input class="btn btn-outline-primary" type="submit" value="{{ l.buttons.create }}">
-				</form>
-			</td>
-		</tr>
 		{% for task in tasks %}
 			{% include "tasks/task" %}
 		{% endfor %}
