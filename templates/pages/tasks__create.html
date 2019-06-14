@@ -6,6 +6,6 @@
 	{% else %}
 		{% assign task_id 	= tasks_insertion._id %}
 		{% assign task_name = params.name %}
-		$(".tasks:first-child").before('{% include "tasks/task" %}');
+		$(".tasks").prepend('{% include "tasks/task" %}');
 	{% endif %}
 {% endif %}

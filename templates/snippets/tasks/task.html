@@ -1,6 +1,6 @@
-<div class="row py-3" id="task_{{ task_id }}">
+<div class="row py-3" data-id="{{ task_id }}">
 	<div class="col flex-grow-1">
-		<a href="/{{ params.locale }}/tasks/{{ task_id }}"> {{ task_name | strip_html }} </a>
+		<a href="/{{ params.locale }}/tasks/{{ task_id }}">{{ task_name | strip_html }}</a>
 	</div>
 	<div class="col-auto pl-1 text-right my-auto">
 		<form action="/{{ params.locale }}/tasks/{{ task_id }}.js" method="delete" data-remote="true">
