@@ -1,12 +1,10 @@
 {
 	"en": {
-		"headers": {
-			"placeholders": {
-				"name": "Enter task name..."
-			},
-			"buttons": {
-				"create": "Create"
-			}
+		"placeholders": {
+			"name": "Enter task name..."
+		},
+		"buttons": {
+			"create": "Create"
 		}
 	}
 }
