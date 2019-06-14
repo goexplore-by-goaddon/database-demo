@@ -3,5 +3,8 @@
 		<a href="/{{ params.locale }}/tasks/{{ task._id }}"> {{ task.name | strip_html }} </a>
 	</td>
 	<td>
+		<form class="" id="" action="//{{ params.locale }}/tasks/{{ task._id }}.js" method="delete">
+			<input type="submit" value="{{ l.buttons.destroy }}" class="btn btn-outline-danger">
+		</form>
 	</td>
 </tr>
