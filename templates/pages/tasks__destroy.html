@@ -1,0 +1,8 @@
+{% if account != nil %}
+
+	{% assign tasks_deletion = "destroy_task" | db_delete_one: company_id: account._id, _id: params.id %}
+
+	{% if tasks_deletion.n == 1 %}
+		console.log("Hello");
+	{% endif %}
+{% endif %}
