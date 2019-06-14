@@ -1,9 +1,9 @@
-<tr id="task_{{ task._id }}">
+<tr id="task_{{ task_id }}">
 	<td>
-		<a href="/{{ params.locale }}/tasks/{{ task._id }}"> {{ task.name | strip_html }} </a>
+		<a href="/{{ params.locale }}/tasks/{{ task_id }}"> {{ task_name | strip_html }} </a>
 	</td>
 	<td>
-		<form action="/{{ params.locale }}/tasks/{{ task._id }}.js" method="delete" data-remote="true">
+		<form action="/{{ params.locale }}/tasks/{{ task_id }}.js" method="delete" data-remote="true">
 			<input type="submit" value="{{ l.buttons.destroy }}" class="btn btn-outline-danger">
 		</form>
 	</td>

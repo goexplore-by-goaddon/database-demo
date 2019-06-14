@@ -12,6 +12,8 @@
 <table class="table table-borderless">
 	<tbody>
 		{% for task in tasks %}
+			{% assign task_id 	= task._id %}
+			{% assign task_name = task.name %}
 			{% include "tasks/task" %}
 		{% endfor %}
 	</tbody>
