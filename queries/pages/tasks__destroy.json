@@ -1,5 +1,5 @@
 {
-	"delete_task": {
+	"destroy_task": {
 		"klass": "tasks",
 		"query": {
 			"company_id": "{{ company_id }}",
