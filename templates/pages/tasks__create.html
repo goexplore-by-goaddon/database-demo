@@ -6,6 +6,7 @@
 	{% else %}
 		{% assign task_id 	= tasks_insertion._id %}
 		{% assign task_name = params.name %}
-		$(".tasks").prepend('{% include "tasks/task" %}');
+		$('[data-id="create_task"]').find(":input[name='name']").val("");
+		$('[data-id="tasks"]').prepend('{% include "tasks/task" %}');
 	{% endif %}
 {% endif %}

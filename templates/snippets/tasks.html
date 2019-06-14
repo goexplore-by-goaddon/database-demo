@@ -1,15 +1,11 @@
-<div class="row mb-4">
-	<div class="col-md-12">
-		<form action="/{{ params.locale }}/tasks.js" method="post" data-remote="true">
-			<div class="input-group">
-				<input class="form-control mr-1" type="text" name="name" placeholder="{{ l.placeholders.name }}">
-				<input class="btn btn-outline-primary" type="submit" value="{{ l.buttons.create }}">
-			</div>
-		</form>
+<form data-id="create_task" action="/{{ params.locale }}/tasks.js" method="post" data-remote="true">
+	<div class="input-group">
+		<input class="form-control mr-1" type="text" name="name" placeholder="{{ l.placeholders.name }}">
+		<input class="btn btn-outline-primary" type="submit" value="{{ l.buttons.create }}">
 	</div>
-</div>
+</form>
 
-<div class="tasks">
+<div data-id="tasks">
 	{% for task in tasks %}
 		{% assign task_id 	= task._id %}
 		{% assign task_name = task.name %}
