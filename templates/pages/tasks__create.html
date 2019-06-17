@@ -2,7 +2,7 @@
 
 	{% assign tasks_insertion = "create_task" | db_insert_one: company_id: account._id, name: params.name %}
 
-	{% if tasks_insertion._id != nil %}
+	{% if tasks_insertion._id == nil %}
 		alertify.error("{{ l.not_created }}");
 	{% else %}
 		{% assign task_id 	= tasks_insertion._id %}
