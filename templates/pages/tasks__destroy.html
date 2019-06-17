@@ -3,6 +3,8 @@
 	{% assign tasks_deletion = "destroy_task" | db_delete_one: company_id: account._id, _id: params.id %}
 
 	{% if tasks_deletion.deleted_count == 1 %}
-		$('[data-id="' + "{{ params.id }}" + '"]').remove();
+		var task = $('[data-id="' + "{{ params.id }}" + '"]');
+		task.prev("hr").remove();
+		task.remove();
 	{% endif %}
 {% endif %}
