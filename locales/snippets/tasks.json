@@ -1,5 +1,6 @@
 {
 	"en": {
+		"headline": "Tasks",
 		"placeholders": {
 			"name": "Enter task name..."
 		},
