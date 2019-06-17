@@ -2,8 +2,10 @@
 
 	{% assign tasks_update = "update_task" | db_update_one: company_id: account._id, name: params.name, _id: params.id %}
 
-	{% if tasks_update.updated_count != 1 %}
-		alertify.error("{{ l.not_updated }}");
+	{% if tasks_update.n != 1 %}
+		alertify.error("{{ l.not_found }}");
+	{% elsif tasks_update.n_modified != 1 %}
+		alertify.message("{{ l.not_updated }}");
 	{% else %}
 		alertify.success("{{ l.updated }}");
 	{% endif %}
