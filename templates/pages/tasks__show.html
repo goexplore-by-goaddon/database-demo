@@ -3,7 +3,9 @@
 	{% assign tasks_query 	= "tasks" | db_find: company_id: account._id, _id: params.id %}
 	{% assign task 					= tasks_query.results.first %}
 
-	{% if task != nil %}
+	{% if task == nil %}
+		<h5 class="mb-3">{{ l.not_found }}</h5>
+	{% else %}
 
 		{% include "task" %}
 

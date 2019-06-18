@@ -1,2 +1,2 @@
-# launchpad
-Fork this and start building your Goexplore-enabled user interface.
+# crud-demo
+A simple task manager where you can create, update and destroy tasks in your Goaddon MongoDB.
