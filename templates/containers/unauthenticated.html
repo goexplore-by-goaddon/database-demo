@@ -1,8 +1,8 @@
 <div class="w-100 flex-shrink-0">
 	<nav class="navbar navbar-expand-lg navbar-light bg-white pb-3">
-		<a class="navbar-brand" href="/{{ params.locale }}">Task manager</a>
+		<a class="navbar-brand" href="/{{ params.locale }}">{{ l.logo }}</a>
 		<button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-		<span class="navbar-toggler-icon"></span>
+			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
@@ -27,24 +27,6 @@
 
 <footer class="footer mt-auto py-5 bg-dark">
 	<div class="container">
-		<table class="footer-links">
-			<tbody>
-				<tr>
-					<td>
-						<div class="lead"><a class="text-light" href="/{{ params.locale }}">{{ l.frontpage }}</a></div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="lead"><a class="text-light" href="/{{ params.locale }}/users/sign_up">{{ l.sign_up }}</a></div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="lead"><a class="text-light" href="/{{ params.locale }}/users/sign_in">{{ l.sign_in }}</a></div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<p class="text-light">{{ l.footer }}</p>
 	</div>
 </footer>
