@@ -1,5 +1,5 @@
 {
-	"authenticate_user": {
+	"authenticate": {
 		"unauthenticated": false
 	},
 	"container": {
