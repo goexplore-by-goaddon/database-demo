@@ -1,7 +1,6 @@
 {
 	"authenticate_user": {
-		"default": true,
-		"static_pages__index": false
+		"unauthenticated": false
 	},
 	"container": {
 		"static_pages__index": "unauthenticated"
