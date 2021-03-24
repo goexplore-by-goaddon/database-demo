@@ -9,7 +9,8 @@
 
   </div>
   <div class="col-auto ps-1 text-end my-auto">
-    <form action="{{ 'tasks__destroy' | path_for: id: task_id, format: 'js' }}" method="delete" data-remote="true">
+    <form action="{{ 'tasks__destroy' | path_for: id: task_id, format: 'js' }}" method="post" data-remote="true">
+      <input type="hidden" name="_method" value="delete">
       <input type="submit" value="{{ l.buttons.destroy }}" class="btn btn-outline-danger">
     </form>
   </div>
