@@ -8,7 +8,7 @@
     <a href="{{ 'tasks__show' | path_for: id: task_id }}">{{ task_name | strip_html }}</a> &#183; {{ l.created }} <span title="{{ created_at | i18n_l: 'wday_date_hours_minutes' | capitalize }}">{{ created_at | time_distance_in_words: now }} {{ l.ago }}</span>
 
   </div>
-  <div class="col-auto pl-1 text-right my-auto">
+  <div class="col-auto ps-1 text-end my-auto">
     <form action="{{ 'tasks__destroy' | path_for: id: task_id, format: 'js' }}" method="delete" data-remote="true">
       <input type="submit" value="{{ l.buttons.destroy }}" class="btn btn-outline-danger">
     </form>
